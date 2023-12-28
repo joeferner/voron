@@ -5,3 +5,7 @@
 # Info
 
 - Voron parts were printed with ABS+Glass Fiber filament from Phaetus
+
+# Notifications
+
+- [Mooncord](https://eliteschw31n.gitbook.io/mooncord/)
