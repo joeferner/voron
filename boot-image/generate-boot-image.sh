@@ -63,7 +63,7 @@ convert -alpha remove -background "#000000" "${THROBBER}" /tmp/throbber%02d.rgb
   --pic_width $THROBBER_WIDTH \
   --pic_height $THROBBER_HEIGHT \
   --pic_position 0x05 \
-  --pic_position_offset 200 \
+  --pic_position_offset 232 \
   --pic_anim_type 1 \
   --pic_anim_loop 0 \
   $(ls /tmp/throbber*.rgb | sort -n | xargs -I xxx echo "--blob xxx") \
