@@ -12,7 +12,9 @@
 
 # Print Settings
 
-- Printer -> Machine G-code -> Layer change G-code: `M117 Layer {layer_num+1}/[total_layer_count] : {filament_settings_id[0]}`
+- Printer -> Machine G-code
+  - Matchine start G-code (add): `PRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] Chamber=[chamber_temperature] PRINT_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} PRINT_MAX={first_layer_print_max[0]},{first_layer_print_max[1]}`
+  - Layer change G-code: `M117 Layer {layer_num+1}/[total_layer_count] : {filament_settings_id[0]}`
 - Layer height: 0.2 mm
 - Line width -> Default: 0.4 mm
 - Infill percentage: 40%
