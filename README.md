@@ -2,6 +2,11 @@
 
 - [Big Tree Tech HDMI5 Mount](https://www.teamfdm.com/files/file/618-mount-for-bigtreetech-hdmi5-screen-trident-voron-2xxx/)
 
+# Input Shaping
+
+- https://mellow.klipper.cn/#/advanced/usb_adxl
+- https://github.com/VoronDesign/Voron-Stealthburner/blob/main/STLs/Stealthburner/ADXL345_Mounts/sb_adxl_mount_generic_15.5mm_c_c.stl
+
 # Info
 
 - Voron parts were printed with ABS+Glass Fiber filament from Phaetus
@@ -22,4 +27,3 @@
 - Wall count: 4
 - Solid top/bottom layers: 5
 - Supports: NONE
-- Ironing type: All top surfaces
