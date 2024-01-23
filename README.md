@@ -2,10 +2,40 @@
 
 - [Big Tree Tech HDMI5 Mount](https://www.teamfdm.com/files/file/618-mount-for-bigtreetech-hdmi5-screen-trident-voron-2xxx/)
 
+# Z Calibration
+
+using 0.15mm feeler gauge
+
+```
+G28
+BED_MESH_CLEAR 
+QUAD_GANTRY_LEVEL
+G28
+G1 X150 Y150 Z1 F6000
+Z_ENDSTOP_CALIBRATE
+```
+
 # Input Shaping
 
 - https://mellow.klipper.cn/#/advanced/usb_adxl
 - https://github.com/VoronDesign/Voron-Stealthburner/blob/main/STLs/Stealthburner/ADXL345_Mounts/sb_adxl_mount_generic_15.5mm_c_c.stl
+
+# Skew Calibration
+
+- https://www.thingiverse.com/thing:2972743/files
+- https://www.klipper3d.org/Skew_Correction.html
+
+# Upgrade Klipper Firmware
+
+```
+sudo service klipper stop
+cd ~/klipper
+make clean
+make menuconfig
+make
+make flash FLASH_DEVICE=/dev/serial/by-id/$(ls /dev/serial/by-id/ | grep stm32f446)
+sudo service klipper start
+```
 
 # Info
 
@@ -27,3 +57,13 @@
 - Wall count: 4
 - Solid top/bottom layers: 5
 - Supports: NONE
+
+# Troubleshooting
+
+## Klipper connection
+
+```
+journalctl -u klipper.service
+# if c_helper.so
+rm -rf /home/biqu/klipper/klippy/chelper/c_helper.so
+```
